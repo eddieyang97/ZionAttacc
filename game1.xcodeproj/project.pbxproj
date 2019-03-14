@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		878F38F3223AD1D200916FFD /* 8143759-50795-2A-zoomin.png in Resources */ = {isa = PBXBuildFile; fileRef = 878F38F2223AD1D200916FFD /* 8143759-50795-2A-zoomin.png */; };
 		878F38F5223AD37B00916FFD /* clockFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 878F38F4223AD37B00916FFD /* clockFont.ttf */; };
+		878F3903223ADEBC00916FFD /* DepressedZionTear.png in Resources */ = {isa = PBXBuildFile; fileRef = 878F3902223ADEBC00916FFD /* DepressedZionTear.png */; };
+		878F3905223ADF5500916FFD /* youWin.png in Resources */ = {isa = PBXBuildFile; fileRef = 878F3904223ADF5400916FFD /* youWin.png */; };
 		FC2D286122393F52005FEE60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D286022393F52005FEE60 /* AppDelegate.swift */; };
 		FC2D286322393F52005FEE60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D286222393F52005FEE60 /* ViewController.swift */; };
 		FC2D286622393F52005FEE60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2D286422393F52005FEE60 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		878F38F2223AD1D200916FFD /* 8143759-50795-2A-zoomin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8143759-50795-2A-zoomin.png"; sourceTree = "<group>"; };
 		878F38F4223AD37B00916FFD /* clockFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clockFont.ttf; sourceTree = "<group>"; };
+		878F3902223ADEBC00916FFD /* DepressedZionTear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DepressedZionTear.png; sourceTree = "<group>"; };
+		878F3904223ADF5400916FFD /* youWin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youWin.png; sourceTree = "<group>"; };
 		FC2D285D22393F52005FEE60 /* game1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2D286022393F52005FEE60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2D286222393F52005FEE60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		FC2D285F22393F52005FEE60 /* game1 */ = {
 			isa = PBXGroup;
 			children = (
+				878F3904223ADF5400916FFD /* youWin.png */,
+				878F3902223ADEBC00916FFD /* DepressedZionTear.png */,
 				878F38F4223AD37B00916FFD /* clockFont.ttf */,
 				878F38F2223AD1D200916FFD /* 8143759-50795-2A-zoomin.png */,
 				FC2D286022393F52005FEE60 /* AppDelegate.swift */,
@@ -132,6 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				878F38F5223AD37B00916FFD /* clockFont.ttf in Resources */,
+				878F3905223ADF5500916FFD /* youWin.png in Resources */,
+				878F3903223ADEBC00916FFD /* DepressedZionTear.png in Resources */,
 				FC2D286B22393F5B005FEE60 /* LaunchScreen.storyboard in Resources */,
 				FC2D286822393F5B005FEE60 /* Assets.xcassets in Resources */,
 				FC2D286622393F52005FEE60 /* Main.storyboard in Resources */,
