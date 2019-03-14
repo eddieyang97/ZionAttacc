@@ -26,6 +26,7 @@
 		879AA738223AEDF600609CBA /* band.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 879AA735223AEDF600609CBA /* band.jpg */; };
 		879AA739223AEDF600609CBA /* side.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 879AA736223AEDF600609CBA /* side.jpg */; };
 		879AA73B223AF10900609CBA /* Kcourt.png in Resources */ = {isa = PBXBuildFile; fileRef = 879AA73A223AF10900609CBA /* Kcourt.png */; };
+		879AA73D223AF23000609CBA /* startViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879AA73C223AF23000609CBA /* startViewController.swift */; };
 		FC2D286122393F52005FEE60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D286022393F52005FEE60 /* AppDelegate.swift */; };
 		FC2D286322393F52005FEE60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D286222393F52005FEE60 /* ViewController.swift */; };
 		FC2D286622393F52005FEE60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2D286422393F52005FEE60 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		879AA735223AEDF600609CBA /* band.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = band.jpg; sourceTree = "<group>"; };
 		879AA736223AEDF600609CBA /* side.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = side.jpg; sourceTree = "<group>"; };
 		879AA73A223AF10900609CBA /* Kcourt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kcourt.png; sourceTree = "<group>"; };
+		879AA73C223AF23000609CBA /* startViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startViewController.swift; sourceTree = "<group>"; };
 		FC2D285D22393F52005FEE60 /* game1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2D286022393F52005FEE60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2D286222393F52005FEE60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				878F3902223ADEBC00916FFD /* DepressedZionTear.png */,
 				878F38F4223AD37B00916FFD /* clockFont.ttf */,
 				878F38F2223AD1D200916FFD /* 8143759-50795-2A-zoomin.png */,
+				879AA73C223AF23000609CBA /* startViewController.swift */,
 				FC2D286022393F52005FEE60 /* AppDelegate.swift */,
 				FC2D286222393F52005FEE60 /* ViewController.swift */,
 				FC6BE51D223A92BF00801E59 /* brick.swift */,
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2D286322393F52005FEE60 /* ViewController.swift in Sources */,
+				879AA73D223AF23000609CBA /* startViewController.swift in Sources */,
 				FC2D286122393F52005FEE60 /* AppDelegate.swift in Sources */,
 				FC6BE51E223A92BF00801E59 /* brick.swift in Sources */,
 			);

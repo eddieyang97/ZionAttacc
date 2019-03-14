@@ -141,6 +141,7 @@ class ViewController: UIViewController {
     //    var hitCount: Int = 0
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         ballX = Int(ball.center.x)
         ballY = Int(ball.center.y)
@@ -166,6 +167,7 @@ class ViewController: UIViewController {
         playBackground()
         
     }
+    
     
     func setupBricks() {
         brickDropInterval = defaultBDInterval
