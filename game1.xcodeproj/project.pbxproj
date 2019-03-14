@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		878F38F3223AD1D200916FFD /* 8143759-50795-2A-zoomin.png in Resources */ = {isa = PBXBuildFile; fileRef = 878F38F2223AD1D200916FFD /* 8143759-50795-2A-zoomin.png */; };
+		878F38F5223AD37B00916FFD /* clockFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 878F38F4223AD37B00916FFD /* clockFont.ttf */; };
 		FC2D286122393F52005FEE60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D286022393F52005FEE60 /* AppDelegate.swift */; };
 		FC2D286322393F52005FEE60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D286222393F52005FEE60 /* ViewController.swift */; };
 		FC2D286622393F52005FEE60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2D286422393F52005FEE60 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		878F38F2223AD1D200916FFD /* 8143759-50795-2A-zoomin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8143759-50795-2A-zoomin.png"; sourceTree = "<group>"; };
+		878F38F4223AD37B00916FFD /* clockFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clockFont.ttf; sourceTree = "<group>"; };
 		FC2D285D22393F52005FEE60 /* game1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2D286022393F52005FEE60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2D286222393F52005FEE60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,13 +60,15 @@
 		FC2D285F22393F52005FEE60 /* game1 */ = {
 			isa = PBXGroup;
 			children = (
+				878F38F4223AD37B00916FFD /* clockFont.ttf */,
+				878F38F2223AD1D200916FFD /* 8143759-50795-2A-zoomin.png */,
 				FC2D286022393F52005FEE60 /* AppDelegate.swift */,
 				FC2D286222393F52005FEE60 /* ViewController.swift */,
+				FC6BE51D223A92BF00801E59 /* brick.swift */,
 				FC2D286422393F52005FEE60 /* Main.storyboard */,
 				FC2D286722393F5B005FEE60 /* Assets.xcassets */,
 				FC2D286922393F5B005FEE60 /* LaunchScreen.storyboard */,
 				FC2D286C22393F5B005FEE60 /* Info.plist */,
-				FC6BE51D223A92BF00801E59 /* brick.swift */,
 			);
 			path = game1;
 			sourceTree = "<group>";
@@ -125,9 +131,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878F38F5223AD37B00916FFD /* clockFont.ttf in Resources */,
 				FC2D286B22393F5B005FEE60 /* LaunchScreen.storyboard in Resources */,
 				FC2D286822393F5B005FEE60 /* Assets.xcassets in Resources */,
 				FC2D286622393F52005FEE60 /* Main.storyboard in Resources */,
+				878F38F3223AD1D200916FFD /* 8143759-50795-2A-zoomin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
