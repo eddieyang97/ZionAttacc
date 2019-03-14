@@ -6,6 +6,7 @@
 //  Copyright © 2019 Duke. All rights reserved.
 //
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -54,7 +55,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var rbutton: UIButton!
     
     @objc func moveLeft(_ sender: UIGestureRecognizer){
+        leftPressed = 1
         //print("Long tap")
+        if (rightPressed > 0){
+            playSoundSqueak()
+            rightPressed = 0
+        }
         
         if (Int(self.paddle.center.x) > Int(paddle.frame.width) / 2 + Int(gameAreaView.frame.minX)) {
             paddle.center.x -= paddleShift
@@ -71,8 +77,12 @@ class ViewController: UIViewController {
     }
     
     @objc func moveRight(_ sender: UIGestureRecognizer){
+        rightPressed = 1
         //print("Long tap")
-        
+        if (leftPressed > 0){
+            playSoundSqueak()
+            leftPressed = 0
+        }
         if (Int(self.paddle.center.x) < Int(gameAreaView.frame.width) - Int(paddle.frame.width) / 2 - Int(gameAreaView.frame.minX)) {
             paddle.center.x += paddleShift
         }
@@ -116,6 +126,17 @@ class ViewController: UIViewController {
     var gameTimer: Timer? = nil
     var timeElapsed: Double = 0
     
+    var leftPressed = 1
+    var rightPressed = 1
+
+    //music
+    var player: AVAudioPlayer?
+    var playerEverytime: AVAudioPlayer?
+    var playerSqueak: AVAudioPlayer?
+    var playerBackground: AVAudioPlayer?
+    var playerLosing: AVAudioPlayer?
+    var playerWinning: AVAudioPlayer?
+    var playerStartScreen: AVAudioPlayer?
     //    var hitCount: Int = 0
     
     override func viewDidLoad() {
@@ -141,6 +162,8 @@ class ViewController: UIViewController {
         setupBricks()
         
         gameTimer = Timer.scheduledTimer(timeInterval: 1 / fps, target: self, selector: #selector(runMainLoop), userInfo: nil, repeats: true)
+        playBackground()
+        
     }
     
     func setupBricks() {
@@ -237,13 +260,24 @@ class ViewController: UIViewController {
     }
     
     func losing() {
+        playerBackground?.stop()
+        playerEverytime?.stop()
+        playerStartScreen?.stop()
+        
+        playLosing()
         gameTimer!.invalidate()
         self.performSegue(withIdentifier: "loseSegue", sender: nil)
     }
     
     func winning() {
+        playerBackground?.stop()
+        playerEverytime?.stop()
+        playerStartScreen?.stop()
+        
+        playWinning()
         gameTimer!.invalidate()
         self.performSegue(withIdentifier: "winSegue", sender: nil)
+        
     }
     
     @objc func runMainLoop() {
@@ -254,6 +288,11 @@ class ViewController: UIViewController {
         
         ballX = Int(ball.center.x)
         ballY = Int(ball.center.y)
+        
+        if (second == 10) {
+            playerBackground?.stop()
+            playSoundEverytime()
+        }
         
         // after fireTimer
         if (counter == Int(fps)) {
@@ -296,4 +335,126 @@ class ViewController: UIViewController {
         print("YVelo: " + String(ballYVelo))
     }
     
+    //MARK: music
+    func playSoundEverytime() {
+        //print ("ues1")
+        guard let url = Bundle.main.url(forResource: "Everytime", withExtension: "wav") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            playerEverytime = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            guard let playerEverytime = playerEverytime else { return }
+            
+            playerEverytime.play()
+            playerEverytime.volume = 50
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func playSoundSqueak() {
+       //print ("ues1Squeak")
+        guard let url = Bundle.main.url(forResource: "better shoe squeak", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            playerSqueak = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            guard let playerSqueak = playerSqueak else { return }
+            
+            playerSqueak.play()
+            playerSqueak.volume = 100
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func playBackground() {
+//        print ("ues1Back")
+        guard let url = Bundle.main.url(forResource: "background", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            playerBackground = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            guard let playerBackground = playerBackground else { return }
+            
+            playerBackground.play()
+            playerBackground.volume = 200
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func playLosing() {
+        
+//        print ("Losing")
+        guard let url = Bundle.main.url(forResource: "losing", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            playerLosing = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            guard let playerLosing = playerLosing else { return }
+            
+            playerLosing.play()
+            playerLosing.volume = 500
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func playWinning() {
+//        print ("Winning")
+        guard let url = Bundle.main.url(forResource: "winning", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            playerWinning = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            guard let playerWinning = playerWinning else { return }
+            
+            playerWinning.play()
+            playerWinning.volume = 50
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func playStartScreen() {
+        print ("StartScreen")
+        guard let url = Bundle.main.url(forResource: "startScreen", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            playerStartScreen = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            guard let playerStartScreen = playerStartScreen else { return }
+            
+            playerStartScreen.play()
+            playerStartScreen.volume = 50
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+
 }
