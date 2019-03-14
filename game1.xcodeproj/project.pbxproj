@@ -25,6 +25,7 @@
 		879AA737223AEDF600609CBA /* center.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 879AA734223AEDF600609CBA /* center.jpg */; };
 		879AA738223AEDF600609CBA /* band.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 879AA735223AEDF600609CBA /* band.jpg */; };
 		879AA739223AEDF600609CBA /* side.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 879AA736223AEDF600609CBA /* side.jpg */; };
+		879AA73B223AF10900609CBA /* Kcourt.png in Resources */ = {isa = PBXBuildFile; fileRef = 879AA73A223AF10900609CBA /* Kcourt.png */; };
 		FC2D286122393F52005FEE60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D286022393F52005FEE60 /* AppDelegate.swift */; };
 		FC2D286322393F52005FEE60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D286222393F52005FEE60 /* ViewController.swift */; };
 		FC2D286622393F52005FEE60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2D286422393F52005FEE60 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		879AA734223AEDF600609CBA /* center.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = center.jpg; sourceTree = "<group>"; };
 		879AA735223AEDF600609CBA /* band.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = band.jpg; sourceTree = "<group>"; };
 		879AA736223AEDF600609CBA /* side.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = side.jpg; sourceTree = "<group>"; };
+		879AA73A223AF10900609CBA /* Kcourt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kcourt.png; sourceTree = "<group>"; };
 		FC2D285D22393F52005FEE60 /* game1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2D286022393F52005FEE60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2D286222393F52005FEE60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				FC2D286422393F52005FEE60 /* Main.storyboard */,
 				879AA730223AED3200609CBA /* usp_ncaa_basketball-_north_carolina_at_duke.jpg */,
 				879AA72E223AECA500609CBA /* CpLivnAXgAExtus.jpg */,
+				879AA73A223AF10900609CBA /* Kcourt.png */,
 				879AA72C223AEBB200609CBA /* bball.png */,
 				FC2D286722393F5B005FEE60 /* Assets.xcassets */,
 				FC2D286922393F5B005FEE60 /* LaunchScreen.storyboard */,
@@ -182,6 +185,7 @@
 				879AA737223AEDF600609CBA /* center.jpg in Resources */,
 				878F38F5223AD37B00916FFD /* clockFont.ttf in Resources */,
 				879AA731223AED3300609CBA /* usp_ncaa_basketball-_north_carolina_at_duke.jpg in Resources */,
+				879AA73B223AF10900609CBA /* Kcourt.png in Resources */,
 				879AA729223AE40F00609CBA /* winning.mp3 in Resources */,
 				879AA739223AEDF600609CBA /* side.jpg in Resources */,
 				879AA725223AE40F00609CBA /* Everytime.wav in Resources */,

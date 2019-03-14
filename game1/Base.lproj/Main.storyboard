@@ -38,7 +38,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="NB4-ed-0cf"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="NB4-ed-0cf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,6 +69,10 @@
                                         <rect key="frame" x="0.0" y="927" width="300" height="135"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center" id="J2W-Yw-ULx">
+                                        <rect key="frame" x="297" y="927" width="229" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side" id="Ib3-oS-PLT">
                                         <rect key="frame" x="523" y="927" width="281" height="135"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,8 +100,18 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" id="aiX-r0-N03">
-                                        <rect key="frame" x="0.0" y="0.0" width="804" height="83"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="804" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="A0X-nq-VrT">
+                                                <rect key="frame" x="340" y="21" width="146" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="1" green="0.23430016076032867" blue="0.21182467638043934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="50"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" id="JNv-hb-MdX">
@@ -108,18 +122,6 @@
                                         <rect key="frame" x="387" y="701" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center" id="J2W-Yw-ULx">
-                                        <rect key="frame" x="297" y="927" width="229" height="135"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1:00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="A0X-nq-VrT">
-                                        <rect key="frame" x="354" y="80" width="97" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" red="1" green="0.23430016076032867" blue="0.21182467638043934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="40"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -190,7 +192,7 @@
         <image name="band" width="400" height="225"/>
         <image name="bball" width="500" height="500"/>
         <image name="center" width="600" height="400"/>
-        <image name="court" width="600" height="450"/>
+        <image name="court" width="600" height="425"/>
         <image name="default" width="374" height="777"/>
         <image name="side" width="1500" height="1000"/>
         <image name="startScreen" width="500" height="692"/>

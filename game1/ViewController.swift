@@ -137,6 +137,7 @@ class ViewController: UIViewController {
     var playerLosing: AVAudioPlayer?
     var playerWinning: AVAudioPlayer?
     var playerStartScreen: AVAudioPlayer?
+    var songPlayed: Int = 0
     //    var hitCount: Int = 0
     
     override func viewDidLoad() {
@@ -289,7 +290,8 @@ class ViewController: UIViewController {
         ballX = Int(ball.center.x)
         ballY = Int(ball.center.y)
         
-        if (second == 10) {
+        if (second == 10 && songPlayed == 0) {
+            songPlayed = 1
             playerBackground?.stop()
             playSoundEverytime()
         }
