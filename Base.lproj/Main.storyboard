@@ -49,14 +49,14 @@
                                             <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syW-Yj-p51"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball.gif" translatesAutoresizingMaskIntoConstraints="NO" id="JCv-Nx-qVT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="JCv-Nx-qVT">
                                         <rect key="frame" x="387" y="925" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="dxz-8u-Aot"/>
                                             <constraint firstAttribute="width" constant="30" id="f5v-Ra-RXn"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paddle.gif" translatesAutoresizingMaskIntoConstraints="NO" id="JNv-hb-MdX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paddle" translatesAutoresizingMaskIntoConstraints="NO" id="JNv-hb-MdX">
                                         <rect key="frame" x="327" y="959" width="150" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="DHW-yf-q8W"/>
@@ -98,7 +98,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ball.gif" width="15" height="15"/>
-        <image name="paddle.gif" width="60" height="12"/>
+        <image name="ball" width="16" height="16"/>
+        <image name="paddle" width="16" height="16"/>
     </resources>
 </document>
