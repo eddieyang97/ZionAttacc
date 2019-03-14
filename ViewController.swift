@@ -75,13 +75,28 @@ class ViewController: UIViewController {
     }
     
     func updateBall() {
-        updateSpeedX()
-        updateSpeedY()
+        // check if ball touches paddle
+        if (ball.frame.intersects(paddle.frame)) {
+            reverseYVelo
+            // change picture here
+        }
         
+        // check if ball touches sides
+        if (Int(ball.center.x) > Int(gameAreaView.frame.width) -  Int(ball.frame.width) / 2 || Int(ball.center.x) < Int(ball.frame.width) / 2) {
+            reverseXVelo
+        }
+        
+        // check if ball touches top
+        if (Int(ball.center.y) < Int(ball.frame.width) / 2) {
+            reverseYVelo
+        }
+        
+        // check if ball falls off the screen
         if (Int(ball.center.y) > Int(gameAreaView.frame.height)) {
             losing()
         }
         
+        // check if ball touches bricks
         if (bricks.count > 0) {
             for i in 0...(bricks.count - 1) {
                 if (ball.frame.intersects(bricks[i].frame)) {
@@ -96,32 +111,40 @@ class ViewController: UIViewController {
             }
         }
         
+        // update ball position
         ball.center.x += CGFloat(ballXVelo)
         ball.center.y += CGFloat(ballYVelo)
-        
     }
     
-    func updateSpeedX() {
-        if (Int(ball.center.x) > Int(gameAreaView.frame.width) -  Int(ball.frame.width) / 2 || Int(ball.center.x) < Int(ball.frame.width) / 2 || touchPaddleFromSide()) {
-            ballXVelo = -ballXVelo
-        }
-    }
-
-    func updateSpeedY() {
-        if (!touchPaddleFromSide() && (ball.frame.intersects(paddle.frame) || Int(ball.center.y) < Int(ball.frame.width) / 2 || Int(ball.center.y) > Int(gameAreaView.frame.height))) {
-            ballYVelo = -ballYVelo
-        }
+    func reverseXVelo() {
+        ballXVelo = -ballXVelo
     }
     
-    func touchPaddleFromSide() -> Bool{
+    func reverseYVelo() {
+        ballYVelo = -ballYVelo
+    }
+//
+//    func updateSpeedX() {
+//        if (Int(ball.center.x) > Int(gameAreaView.frame.width) -  Int(ball.frame.width) / 2 || Int(ball.center.x) < Int(ball.frame.width) / 2 || touchPaddleFromSide()) {
+//            ballXVelo = -ballXVelo
+//        }
+//    }
+//
+//    func updateSpeedY() {
+//        if (!touchPaddleFromSide() && (ball.frame.intersects(paddle.frame) || Int(ball.center.y) < Int(ball.frame.width) / 2 || Int(ball.center.y) > Int(gameAreaView.frame.height))) {
+//            ballYVelo = -ballYVelo
+//        }
+//    }
+//
+//    func touchPaddleFromSide() -> Bool{
 //        if (ball.frame.intersects(paddle.frame)) {
 //            print(ball.center.x)
 //            print(ball.center.y)
 //            print(paddle.center.x)
 //            print(paddle.center.y)
 //        }
-        return ball.frame.intersects(paddle.frame) && ball.center.y + paddle.frame.height + 4 > paddle.center.y && ball.center.y - paddle.frame.height - 4 < paddle.center.y
-    }
+//        return ball.frame.intersects(paddle.frame) && ball.center.y + paddle.frame.height + 4 > paddle.center.y && ball.center.y - paddle.frame.height - 4 < paddle.center.y
+//    }
     
     func shiftBricks() {
         for brick in bricks {
@@ -130,11 +153,11 @@ class ViewController: UIViewController {
     }
     
     func losing() {
-        
+        // implement losing end here
     }
     
     func winning() {
-        
+        // implement winning end here
     }
     
     @objc func runMainLoop() {
@@ -152,7 +175,7 @@ class ViewController: UIViewController {
         
         if (brickLeft == 0) {
             setupBricks()
-            //winning()
+//            winning()
         }
         timeElapsed += 1 / fps
     }
